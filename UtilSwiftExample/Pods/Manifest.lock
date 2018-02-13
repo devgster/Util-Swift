@@ -1,0 +1,16 @@
+PODS:
+  - Util-Swift (0.2.0)
+
+DEPENDENCIES:
+  - Util-Swift (from `../Util-Swift/`)
+
+EXTERNAL SOURCES:
+  Util-Swift:
+    :path: ../Util-Swift/
+
+SPEC CHECKSUMS:
+  Util-Swift: 0953f55989a012530c0093bf14a295eeb53d7952
+
+PODFILE CHECKSUM: 26351d961da1e7d19a8acc455b11645c0784de34
+
+COCOAPODS: 1.4.0

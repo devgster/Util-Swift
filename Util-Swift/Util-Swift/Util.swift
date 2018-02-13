@@ -11,6 +11,8 @@ import Foundation
 
 public class Util {
     
+    private init() {}
+    
     public static func doSomething() -> String{
         return "Util Swift"
     }

@@ -1,0 +1,6 @@
+framework module Util_Swift {
+  umbrella header "Util-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name            = "UtilSwift.podspec"
+  s.name            = "Util-Swift"
   s.version         = "0.2.0"
   s.summary         = "This is UtilSwift"
 #  s.description    = ""
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.source          = { :git => "https://github.com/devgster/Util-Swift.git", :tag => "#{s.version}" }
 
-  s.source_files    = "Util-Swift"
+  s.source_files    = "Util-Swift/**/*"
 
   # s.public_header_files = "Classes/**/*.h"
 
