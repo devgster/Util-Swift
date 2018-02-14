@@ -1,5 +1,5 @@
 PODS:
-  - Util-Swift (0.2.0)
+  - Util-Swift (0.2.2)
 
 DEPENDENCIES:
   - Util-Swift (from `../Util-Swift/`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../Util-Swift/
 
 SPEC CHECKSUMS:
-  Util-Swift: 0953f55989a012530c0093bf14a295eeb53d7952
+  Util-Swift: 1dcedf9ca673743b5e3ce30cbd085cb8450d88cc
 
 PODFILE CHECKSUM: 26351d961da1e7d19a8acc455b11645c0784de34
 

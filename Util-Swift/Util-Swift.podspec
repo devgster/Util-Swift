@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source_files    = "Util-Swift/**/*"
 
   # s.public_header_files = "Classes/**/*.h"
-
+  s.frameworks      = "CoreTelephony"
 
 
 end

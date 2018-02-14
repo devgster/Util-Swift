@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		2E4414102032672200417FD5 /* Util_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E44140E2032672200417FD5 /* Util_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E4414172032677D00417FD5 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4414162032677D00417FD5 /* Util.swift */; };
+		2E4414372032760300417FD5 /* UIDevice+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4414362032760300417FD5 /* UIDevice+extension.swift */; };
+		2E44143920327AA100417FD5 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44143820327AA100417FD5 /* String+extension.swift */; };
+		2E44143B20327DBC00417FD5 /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44143A20327DBC00417FD5 /* UITextField+extension.swift */; };
+		2E44143D20327E0900417FD5 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44143C20327E0900417FD5 /* UIColor+extension.swift */; };
+		2E44143F20327E7400417FD5 /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44143E20327E7400417FD5 /* UIImage+extension.swift */; };
+		2E4414412032826A00417FD5 /* UIWindow+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4414402032826A00417FD5 /* UIWindow+extension.swift */; };
+		2E441443203284FF00417FD5 /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E441442203284FF00417FD5 /* UIFont+extension.swift */; };
+		2E4414452032886100417FD5 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4414442032886100417FD5 /* UIAlertController+extension.swift */; };
+		2E4414472032925A00417FD5 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4414462032925A00417FD5 /* Date+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +25,15 @@
 		2E44140E2032672200417FD5 /* Util_Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util_Swift.h; sourceTree = "<group>"; };
 		2E44140F2032672200417FD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E4414162032677D00417FD5 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		2E4414362032760300417FD5 /* UIDevice+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+extension.swift"; sourceTree = "<group>"; };
+		2E44143820327AA100417FD5 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		2E44143A20327DBC00417FD5 /* UITextField+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
+		2E44143C20327E0900417FD5 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		2E44143E20327E7400417FD5 /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		2E4414402032826A00417FD5 /* UIWindow+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+extension.swift"; sourceTree = "<group>"; };
+		2E441442203284FF00417FD5 /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
+		2E4414442032886100417FD5 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
+		2E4414462032925A00417FD5 /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +66,17 @@
 		2E44140D2032672200417FD5 /* Util-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				2E44140E2032672200417FD5 /* Util_Swift.h */,
+				2E4414462032925A00417FD5 /* Date+extension.swift */,
 				2E44140F2032672200417FD5 /* Info.plist */,
+				2E44143820327AA100417FD5 /* String+extension.swift */,
+				2E4414442032886100417FD5 /* UIAlertController+extension.swift */,
+				2E44143C20327E0900417FD5 /* UIColor+extension.swift */,
+				2E4414362032760300417FD5 /* UIDevice+extension.swift */,
+				2E441442203284FF00417FD5 /* UIFont+extension.swift */,
+				2E44143E20327E7400417FD5 /* UIImage+extension.swift */,
+				2E44143A20327DBC00417FD5 /* UITextField+extension.swift */,
+				2E4414402032826A00417FD5 /* UIWindow+extension.swift */,
+				2E44140E2032672200417FD5 /* Util_Swift.h */,
 				2E4414162032677D00417FD5 /* Util.swift */,
 			);
 			path = "Util-Swift";
@@ -136,6 +163,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E4414172032677D00417FD5 /* Util.swift in Sources */,
+				2E44143B20327DBC00417FD5 /* UITextField+extension.swift in Sources */,
+				2E4414452032886100417FD5 /* UIAlertController+extension.swift in Sources */,
+				2E4414412032826A00417FD5 /* UIWindow+extension.swift in Sources */,
+				2E44143D20327E0900417FD5 /* UIColor+extension.swift in Sources */,
+				2E44143F20327E7400417FD5 /* UIImage+extension.swift in Sources */,
+				2E4414372032760300417FD5 /* UIDevice+extension.swift in Sources */,
+				2E4414472032925A00417FD5 /* Date+extension.swift in Sources */,
+				2E441443203284FF00417FD5 /* UIFont+extension.swift in Sources */,
+				2E44143920327AA100417FD5 /* String+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
