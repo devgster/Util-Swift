@@ -44,42 +44,64 @@ extension UIImage {
         return image
     }
     
-    public func resizeImage(_ dimension: CGFloat, opaque: Bool, contentMode: UIViewContentMode = .scaleAspectFit) -> UIImage {
-        var width: CGFloat
-        var height: CGFloat
-        var newImage: UIImage
+    public func resize(_ size : CGSize) -> UIImage {
+        var actualHeight: CGFloat = self.size.height
+        var actualWidth: CGFloat = self.size.width
+        let maxHeight: CGFloat = size.width
+        let maxWidth: CGFloat = size.height
+        var imgRatio: CGFloat = actualWidth/actualHeight
+        let maxRatio: CGFloat = maxWidth/maxHeight
+        let compressionQuality = 0.5//50 percent compression
         
-        let size = self.size
-        let aspectRatio =  size.width/size.height
-        
-        switch contentMode {
-        case .scaleAspectFit:
-            if aspectRatio > 1 {                            // Landscape image
-                width = dimension
-                height = dimension / aspectRatio
-            } else {                                        // Portrait image
-                height = dimension
-                width = dimension * aspectRatio
+        if (actualHeight > maxHeight || actualWidth > maxWidth) {
+            if(imgRatio < maxRatio) {
+                //adjust width according to maxHeight
+                imgRatio = maxHeight / actualHeight
+                actualWidth = imgRatio * actualWidth
+                actualHeight = maxHeight
+            } else if(imgRatio > maxRatio) {
+                //adjust height according to maxWidth
+                imgRatio = maxWidth / actualWidth
+                actualHeight = imgRatio * actualHeight
+                actualWidth = maxWidth
+            } else {
+                actualHeight = maxHeight
+                actualWidth = maxWidth
             }
-            
-        default:
-            fatalError("UIIMage.resizeToFit(): FATAL: Unimplemented ContentMode")
         }
         
-        if #available(iOS 10.0, *) {
-            let renderFormat = UIGraphicsImageRendererFormat.default()
-            renderFormat.opaque = opaque
-            let renderer = UIGraphicsImageRenderer(size: CGSize(width: width, height: height), format: renderFormat)
-            newImage = renderer.image {
-                (context) in
-                self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
-            }
-        } else {
-            UIGraphicsBeginImageContextWithOptions(CGSize(width: width, height: height), opaque, 0)
-            self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
-            newImage = UIGraphicsGetImageFromCurrentImageContext()!
-            UIGraphicsEndImageContext()
-        }
+        let rect: CGRect = CGRect(x: 0.0, y: 0.0, width: actualWidth, height: actualHeight)
+        UIGraphicsBeginImageContext(rect.size)
+        self.draw(in: rect)
+        let image: UIImage  = UIGraphicsGetImageFromCurrentImageContext()!
+        let imageData = UIImageJPEGRepresentation(image, CGFloat(compressionQuality))
+        UIGraphicsEndImageContext()
+        
+        let resizedImage = UIImage(data: imageData!)
+        return resizedImage!
+    }
+    
+    
+    func tint(_ color: UIColor) -> UIImage
+    {
+        UIGraphicsBeginImageContext(self.size)
+        guard let context = UIGraphicsGetCurrentContext() else { return self }
+        
+        // flip the image
+        context.scaleBy(x: 1.0, y: -1.0)
+        context.translateBy(x: 0.0, y: -self.size.height)
+        
+        // multiply blend mode
+        context.setBlendMode(.multiply)
+        
+        let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
+        context.clip(to: rect, mask: self.cgImage!)
+        color.setFill()
+        context.fill(rect)
+        
+        // create UIImage
+        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else { return self }
+        UIGraphicsEndImageContext()
         
         return newImage
     }

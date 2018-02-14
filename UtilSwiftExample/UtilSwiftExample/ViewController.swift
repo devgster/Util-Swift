@@ -21,6 +21,8 @@ class ViewController: UIViewController {
 //        UIDevice.doSomething()
         print(debug: "테스트")
         print(debug: "테스트2")
+        
+        var image = UIImage(named: "")
     }
 
     override func didReceiveMemoryWarning() {
