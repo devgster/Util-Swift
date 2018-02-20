@@ -32,6 +32,7 @@ extension UIImage {
         return self.color(UIColor.hex(hexString, alpha: alpha));
     }
     
+    
     public func crop( rect: CGRect) -> UIImage {
         var rect = rect
         rect.origin.x*=self.scale
@@ -82,7 +83,7 @@ extension UIImage {
     }
     
     
-    func tint(_ color: UIColor) -> UIImage
+    public func tint(_ color: UIColor) -> UIImage
     {
         UIGraphicsBeginImageContext(self.size)
         guard let context = UIGraphicsGetCurrentContext() else { return self }
